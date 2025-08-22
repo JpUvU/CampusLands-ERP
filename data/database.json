@@ -1,0 +1,17 @@
+{
+    "campers": [
+        {
+            "id": 1096065226,
+            "nombre": "Juan Pablo",
+            "apellidos": "Barrera Diaz",
+            "direccion": "car 13a #103-24",
+            "Telefono": 3115500924,
+            "estado": "En proceso de ingreso",
+            "Riesgo": "Sin riesgo"
+        }
+    ],
+    "trainers": [],
+    "routes": [],
+    "enrollments": [],
+    "evaluations": []
+}
