@@ -3,7 +3,6 @@ import os
 
 def main():
     while True:
-        os.system('cls')
         print("\n=== CAMPUSLANDS ERP ===")
         print("1. Gestión de campers")
         print("2. Gestión de trainers")
@@ -15,8 +14,8 @@ def main():
         print("0. Salir")
 
         opcion = int(input("Seleccione una opción: "))
-
-        match opcion:
+        os.system('cls')
+        match opcion:    
             case 1:
                 campers.menu()
             case 2:
@@ -35,7 +34,7 @@ def main():
                 print('Saliste del programa...')
                 break
             case _:
-                print('Opcion invalida')
+                print('❌ Opcion invalida')
 
 if __name__ == "__main__":
     main()

@@ -16,7 +16,7 @@ def menu():
             case 0:
                 break
             case _:
-                print('Opcion invalida')
+                print('❌ Opcion invalida')
 
 def register_camper():
     data = load_data()
@@ -35,5 +35,10 @@ def register_camper():
 
 def list_campers():
     data = load_data()
+    campers = data.get("campers")
+
+    if campers == []:
+        print('⚠️ No hay ningun camper registrado...')
+
     for c in data["campers"]:
         print(f"{c['id']} - {c['nombre']} {c['apellidos']} ({c['estado']})")

@@ -6,11 +6,28 @@
             "apellidos": "Barrera Diaz",
             "direccion": "car 13a #103-24",
             "Telefono": 3115500924,
+            "estado": "Aprobado",
+            "Riesgo": "Sin riesgo"
+        },
+        {
+            "id": 12345,
+            "nombre": "Kevin",
+            "apellidos": "Arenas",
+            "direccion": "car 13-25",
+            "Telefono": 3115500925,
             "estado": "En proceso de ingreso",
             "Riesgo": "Sin riesgo"
         }
     ],
-    "trainers": [],
+    "trainers": [
+        {
+            "id": 123,
+            "nombre": "Pedro",
+            "apellidos": "Caceres",
+            "especialidad": "Java",
+            "disponibilidad": "Lunes a Miercoles 2pm-7pm"
+        }
+    ],
     "routes": [],
     "enrollments": [],
     "evaluations": []
