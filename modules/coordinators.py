@@ -18,6 +18,7 @@ def menu():
                 break
             case _:
                 print('❌ Opcion invalida')
+                continue
 
 def evaluate_camper():
     data = load_data()
@@ -26,13 +27,13 @@ def evaluate_camper():
     for c in camper:
         if c["estado"] == 'En proceso de ingreso':
             print(f"{c['id']} - {c['nombre']} {c['apellidos']} ({c['estado']})")
+    try:
+        seleccion_camper = int(input('Selecciona el camper por su id, para evaluar: '))
+        for c in camper:
+            if c["id"] == seleccion_camper and c["estado"] != "Aprobado":
+                print('Camper seleccionado: ⬇️')
+                print(f"{c['id']} - {c['nombre']} {c['apellidos']} ({c['estado']})")
 
-    seleccion_camper = int(input('Selecciona el camper por su id, para evaluar: '))
-    for c in camper:
-        if c["id"] == seleccion_camper and c["estado"] != "Aprobado":
-            print('Camper seleccionado: ⬇️')
-            print(f"{c['id']} - {c['nombre']} {c['apellidos']} ({c['estado']})")
-            try:
                 print('El rango de la nota al ingresa debe ser del 1 al 100')
                 nota_teorica = float(input(f'🗒️ Ingresa la nota teorica de {c["nombre"]}: '))
                 nota_practica = float(input(f'📝 Ingresa la nota teorica de {c["nombre"]}: '))
@@ -48,12 +49,11 @@ def evaluate_camper():
                         c["estado"] = "Rechazado"
                         print(f"❌ {c['nombre']} {c['apellidos']} ha sido RECHAZADO (Promedio: {promedio}).")
                     save_data(data)                
-            except (ValueError):
-                print('Dato ingresado es invalido...')
-            return
-        if c["id"] == seleccion_camper and c["estado"] == "Aprobado":
-            print('👦🏻 Este camper ya fue aprobado')
-            return
+            if c["id"] == seleccion_camper and c["estado"] == "Aprobado":
+                print('👦🏻 Este camper ya fue aprobado')
+                return
+    except (ValueError, KeyboardInterrupt):
+        print('Dato ingresado es invalido...')
             
 def list_campers_process_admission():
     data = load_data()

@@ -17,21 +17,25 @@ def menu():
                 break
             case _:
                 print('❌ Opcion invalida')
+                continue
 
 def register_camper():
     data = load_data()
-    camper = {
-        "id": int(input("ID: ")),
-        "nombre": input("Nombre: "),
-        "apellidos": input("Apellido: "),
-        "direccion": input("Direccion: "),
-        "Telefono": int(input('Telefono de contacto: ')),
-        "estado": "En proceso de ingreso",
-        "Riesgo": "Sin riesgo"
-    }
-    data["campers"].append(camper)
-    save_data(data)
-    print("✅ Camper registrado.")
+    try:
+        camper = {
+            "id": int(input("ID: ")),
+            "nombre": input("Nombre: "),
+            "apellidos": input("Apellido: "),
+            "direccion": input("Direccion: "),
+            "Telefono": int(input('Telefono de contacto: ')),
+            "estado": "En proceso de ingreso",
+            "Riesgo": "Sin riesgo"
+        }
+        data["campers"].append(camper)
+        save_data(data)
+        print("✅ Camper registrado.")
+    except (ValueError, KeyboardInterrupt):
+        print('Dato ingresado es invalido...')
 
 def list_campers():
     data = load_data()

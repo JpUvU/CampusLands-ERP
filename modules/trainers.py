@@ -20,6 +20,7 @@ def menu():
                 break
             case _:
                 print('❌ Opcion invalida')
+                continue
 
 def register_trainer():
     data = load_data()
@@ -51,11 +52,18 @@ def list_trainers():
 def search_trainer():
     data = load_data()
     trainer = data.get("trainers")
-
-    print("\n--- Busca el trainer por id ---")
-    idTrainer = int(input('Ingresa el id del trainer: '))
-    for t in trainer:
-        if idTrainer == t['id']:
-            print('👨🏻‍🏫 Trainer encontrado: ', trainer)
+    idTrainerList = []
+    try:
+        print("\n--- Busca el trainer por id ---")
+        idTrainer = int(input('Ingresa el id del trainer: '))
+        encontrado = None
+        for t in trainer:
+            if idTrainer == t['id']:
+                encontrado = t
+                break
+        if encontrado:
+            print(f"👨🏻‍🏫 Trainer encontrado: {encontrado['id']} - {encontrado['nombre']} {encontrado['apellidos']} | Especialidad: {encontrado['especialidad']} | Disponibilidad: {encontrado['disponibilidad']}")
         else:
             print('❌ Trainer no encontrado')
+    except (ValueError, KeyboardInterrupt):
+        print('Dato ingresado es invalido...')

@@ -26,9 +26,42 @@
             "apellidos": "Caceres",
             "especialidad": "Java",
             "disponibilidad": "Lunes a Miercoles 2pm-7pm"
+        },
+        {
+            "id": 12,
+            "nombre": "Julian",
+            "apellidos": "Gonzales",
+            "especialidad": "NetCore",
+            "disponibilidad": "Lunes a Viernes 6am-2pm"
         }
     ],
-    "routes": [],
+    "routes": [
+        {
+            "id": "1",
+            "nombre": "Python",
+            "duracion": "2 meses",
+            "modulos": [
+                "Pseint",
+                " fundamentos de python",
+                " css y html"
+            ],
+            "campers_asignados": [
+                1096065226
+            ]
+        },
+        {
+            "id": "2",
+            "nombre": "c#",
+            "duracion": "3 meses",
+            "modulos": [
+                "algoritmos",
+                " Mysql",
+                " MongoDb",
+                " proyecto"
+            ],
+            "campers_asignados": []
+        }
+    ],
     "enrollments": [],
     "evaluations": []
 }
