@@ -69,17 +69,18 @@ def assign_camper_to_route():
     routes = data.get("routes")
     aprobados = []
 
+    # Listar campers aprobados
     for c in campers:
-        # Lista los campers aprobados
         if c['estado'] == 'Aprobado':
             print(f"{c['id']} - {c['nombre']} {c['apellidos']}")
             aprobados.append(c['nombre'])
 
-    # Esto es para cuando no tengamos campers aprobados
+    # Validación de campers aprobados
     if aprobados == []:
         print('⚠️ No hay ningun registro de campers aprobados para asignar...')
-        
-    # Listar las rutas para saber en cual se asignara al camper
+        return
+
+    # Validación de rutas
     if routes == []:
         print("⚠️ No hay rutas disponibles. Primero crea una ruta.")
         return
@@ -99,16 +100,20 @@ def assign_camper_to_route():
 
                 route_id = input("👉 Ingresa el ID de la ruta a asignar: ")
 
-                if r['id'] == route_id and c['id'] not in r['campers_asignados']:
-                    r["campers_asignados"].append(camper_id)
-                    save_data(data)
-                    print(f"✅ Camper {c['nombre']} asignado a la ruta {r['nombre']}.")
-                else:
-                    print('❌ Lo sentimos el camper ya hace parte de esta ruta...')
+                # Recorremos las rutas para encontrar la seleccionada
+                for r in routes:
+                    if r['id'] == route_id:  # comparo string con string
+                        if camper_id not in r['campers_asignados']:  # comparo int con lista de int
+                            r["campers_asignados"].append(camper_id)
+                            save_data(data)
+                            print(f"✅ Camper {c['nombre']} asignado a la ruta {r['nombre']}.")
+                        else:
+                            print('❌ Lo sentimos, el camper ya hace parte de esta ruta...')
+                        return
+                print("❌ Ruta no encontrada.")
             else:
                 print('❌ No asignaras nada.')
-                return
             return
-        else:
-            print("❌ Camper no encontrado o no está aprobado.")
-            return   
+
+    # Si no encuentra camper aprobado con ese ID
+    print("❌ Camper no encontrado o no está aprobado.")

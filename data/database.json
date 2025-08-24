@@ -2,11 +2,11 @@
     "campers": [
         {
             "id": 1096065226,
-            "nombre": "Juan Pablo",
-            "apellidos": "Barrera Diaz",
+            "nombre": "Juan Pa",
+            "apellidos": "Barrera",
             "direccion": "car 13a #103-24",
             "Telefono": 3115500924,
-            "estado": "Aprobado",
+            "estado": "En proceso de ingreso",
             "Riesgo": "Sin riesgo"
         },
         {
@@ -15,7 +15,7 @@
             "apellidos": "Arenas",
             "direccion": "car 13-25",
             "Telefono": 3115500925,
-            "estado": "En proceso de ingreso",
+            "estado": "Aprobado",
             "Riesgo": "Sin riesgo"
         }
     ],
@@ -46,7 +46,7 @@
                 " css y html"
             ],
             "campers_asignados": [
-                1096065226
+                12345
             ]
         },
         {
