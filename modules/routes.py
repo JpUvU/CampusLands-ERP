@@ -86,7 +86,6 @@ def assign_camper_to_route():
         return
 
     camper_id = int(input("👉 Ingresa el ID del camper a asignar: "))
-
     for c in campers:
         # Verifica que el id ingresado corresponda y de paso que tambien corresponda el estado en "Aprobado"
         if c['id'] == camper_id and c['estado'] == 'Aprobado':
@@ -114,6 +113,5 @@ def assign_camper_to_route():
             else:
                 print('❌ No asignaras nada.')
             return
-
     # Si no encuentra camper aprobado con ese ID
     print("❌ Camper no encontrado o no está aprobado.")

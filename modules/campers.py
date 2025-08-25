@@ -6,7 +6,11 @@ def menu():
         print("1. Registrar camper")
         print("2. Listar campers")
         print("0. Volver")
-        opcion = int(input("Seleccione: "))
+
+        try:
+            opcion = int(input("Seleccione: "))
+        except (ValueError, KeyboardInterrupt):
+            print('❌ Valor invalido...')
 
         match opcion:
             case 1:
@@ -35,7 +39,7 @@ def register_camper():
         save_data(data)
         print("✅ Camper registrado.")
     except (ValueError, KeyboardInterrupt):
-        print('Dato ingresado es invalido...')
+        print('❌ Dato ingresado es invalido...')
 
 def list_campers():
     data = load_data()
