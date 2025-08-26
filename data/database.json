@@ -2,21 +2,21 @@
     "campers": [
         {
             "id": 1096065226,
-            "nombre": "Juan Pa",
-            "apellidos": "Barrera",
+            "nombre": "Juan Pablo",
+            "apellidos": "Barrera Diaz",
             "direccion": "car 13a #103-24",
             "Telefono": 3115500924,
-            "estado": "Aprobado",
+            "estado": "En proceso de ingreso",
             "Riesgo": "Sin riesgo"
         },
         {
-            "id": 12345,
-            "nombre": "Kevin",
-            "apellidos": "Arenas",
-            "direccion": "car 13-25",
-            "Telefono": 3115500925,
-            "estado": "Aprobado",
-            "Riesgo": "Medio"
+            "id": 1097011235,
+            "nombre": "Miguel Angel",
+            "apellidos": "Diaz Riatiga",
+            "direccion": "Car 105 - provenza",
+            "Telefono": 3102827758,
+            "estado": "En proceso de ingreso",
+            "Riesgo": "Sin riesgo"
         }
     ],
     "trainers": [
@@ -33,72 +33,39 @@
             "apellidos": "Gonzales",
             "especialidad": "NetCore",
             "disponibilidad": "Lunes a Viernes 6am-2pm"
+        },
+        {
+            "id": 5,
+            "nombre": "Felipe",
+            "apellidos": "Hernandez",
+            "especialidad": "NodeJs",
+            "disponibilidad": "Lunes a Viernes 6am-2pm"
         }
     ],
     "routes": [
         {
             "id": "1",
-            "nombre": "Python",
-            "duracion": "2 meses",
+            "nombre": "NodeJs",
+            "duracion": "3 meses",
             "modulos": [
-                "Pseint",
-                " fundamentos de python",
-                " css y html"
+                "Introduccion a la algoritmia",
+                " Pseint",
+                " Python"
             ],
-            "campers_asignados": [
-                12345,
-                1096065226
-            ]
+            "campers_asignados": []
         },
         {
             "id": "2",
-            "nombre": "c#",
+            "nombre": "Java",
             "duracion": "3 meses",
             "modulos": [
-                "algoritmos",
-                " Mysql",
-                " MongoDb",
-                " proyecto"
+                "java",
+                " javaScript",
+                " C#"
             ],
             "campers_asignados": []
         }
     ],
-    "enrollments": [
-        {
-            "camper_id": 12345,
-            "camper_nombre": "Kevin",
-            "route_nombre": "Python",
-            "trainer_id": 12,
-            "trainer_nombre": "Julian",
-            "salon": "Polo"
-        },
-        {
-            "camper_id": 1096065226,
-            "camper_nombre": "Juan Pa",
-            "route_nombre": "c#",
-            "trainer_id": 123,
-            "trainer_nombre": "Pedro",
-            "salon": "Casa"
-        }
-    ],
-    "evaluations": [
-        {
-            "camper_id": 12345,
-            "camper_nombre": "Kevin",
-            "route_nombre": "Python",
-            "nota_teorica": 50.0,
-            "nota_practica": 61.0,
-            "promedio": 55.5,
-            "estado": "En riesgo"
-        },
-        {
-            "camper_id": 1096065226,
-            "camper_nombre": "Juan Pa",
-            "route_nombre": "c#",
-            "nota_teorica": 70.0,
-            "nota_practica": 87.0,
-            "promedio": 78.5,
-            "estado": "Aprobado"
-        }
-    ]
+    "enrollments": [],
+    "evaluations": []
 }

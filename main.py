@@ -13,28 +13,32 @@ def main():
         print("7. Reportes")
         print("0. Salir")
 
-        opcion = int(input("Seleccione una opción: "))
-        os.system('cls')
-        match opcion:    
-            case 1:
-                campers.menu()
-            case 2:
-                trainers.menu()
-            case 3:
-                coordinators.menu()
-            case 4:
-                routes.menu()
-            case 5:
-                enrollments.menu()
-            case 6:
-                evaluations.menu()
-            case 7:
-                reports.menu()         
-            case 0:
-                print('Saliste del programa...')
-                break
-            case _:
-                print('❌ Opcion invalida')
+        try:
+            opcion = int(input("Seleccione una opción: "))
+        
+            os.system('cls')
+            match opcion:    
+                case 1:
+                    campers.menu()
+                case 2:
+                    trainers.menu()
+                case 3:
+                    coordinators.menu()
+                case 4:
+                    routes.menu()
+                case 5:
+                    enrollments.menu()
+                case 6:
+                    evaluations.menu()
+                case 7:
+                    reports.menu()         
+                case 0:
+                    print('Saliste del programa...')
+                    break
+                case _:
+                    print('❌ Opcion invalida')
+        except (ValueError, KeyboardInterrupt):
+            print('❌ Dato incorrecto, intente nuevamente...')
 
 if __name__ == "__main__":
     main()
