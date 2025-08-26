@@ -4,6 +4,7 @@ El departamento académico de CampusLands desea llevar el seguimiento académico
 
 Este sistema permite gestionar campers, trainers, rutas de entrenamiento, matrículas, evaluaciones y reportes, con persistencia de datos en formato JSON.
 
+---------------------------------------------------------------------------------------------------------------------------
 🛠️ Stack Tecnológico
 
 🐍 Python
@@ -16,6 +17,7 @@ Este sistema permite gestionar campers, trainers, rutas de entrenamiento, matrí
 
 📂 Módulos
 
+---------------------------------------------------------------------------------------------------------------------------
 
 📂 Estructura del Proyecto
 
@@ -40,14 +42,16 @@ CampusLands-ERP/
 │── README.md
 
 
-📖 Librerías Utilizadas
+---------------------------------------------------------------------------------------------------------------------------
+
+📖 Librerías Utilizadas:
 
 🐻 os → Para ejecutar comandos del sistema y limpiar la terminal
 
 🗃️ json → Para manejar la persistencia de datos en formato JSON
 
-
-🚀 Ejecución
+---------------------------------------------------------------------------------------------------------------------------
+🚀 Ejecución:
 
 Clonar o descargar el proyecto en tu equipo.
 
@@ -55,20 +59,23 @@ Abrir una terminal en la carpeta del proyecto.
 
 Ejecutar el programa con:
 
-🐍    python main.py
+🐍 python main.py
 
-⚠️ Nota Importante sobre la Ruta de Datos
+---------------------------------------------------------------------------------------------------------------------------
+
+⚠️ Nota Importante sobre la Ruta de Datos:
 
 Por defecto, el sistema busca la base de datos en:
 
 ARCHIVO_BASE_DATOS = "data/database.json"
 
-⚠️  Si tu proyecto está dentro de otra carpeta, debes ajustar la ruta.
+⚠️  Si tu proyecto está dentro de otra carpeta, debes ajustar la ruta:
     
 Por ejemplo:
 
 ARCHIVO_BASE_DATOS = "CAMPUSLANDS-ERP/data/database.json"
 
+---------------------------------------------------------------------------------------------------------------------------
 
 📌 Requerimientos
 
@@ -76,7 +83,8 @@ Compatible con Linux y Windows
 
 Tener instalada una versión de Python 3.8 o superior
 
-
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 🎯 Funcionalidades del Sistema
 
 ✅ Gestión de campers
