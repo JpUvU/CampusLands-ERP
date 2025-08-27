@@ -21,6 +21,7 @@ Este sistema permite gestionar campers, trainers, rutas de entrenamiento, matrí
 
 📂 Estructura del Proyecto
 
+```
 CampusLands-ERP/
 │── data/
 │   └── database.json        # Base de datos en formato JSON
@@ -40,7 +41,7 @@ CampusLands-ERP/
 │
 │── main.py                  # Punto de entrada principal del programa
 │── README.md
-
+```
 
 ---------------------------------------------------------------------------------------------------------------------------
 
