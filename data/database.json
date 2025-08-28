@@ -6,7 +6,7 @@
             "apellidos": "Barrera Diaz",
             "direccion": "car 13a #103-24",
             "Telefono": 3115500924,
-            "estado": "En proceso de ingreso",
+            "estado": "Aprobado",
             "Riesgo": "Sin riesgo"
         },
         {
@@ -15,7 +15,7 @@
             "apellidos": "Diaz Riatiga",
             "direccion": "Car 105 - provenza",
             "Telefono": 3102827758,
-            "estado": "En proceso de ingreso",
+            "estado": "Aprobado",
             "Riesgo": "Sin riesgo"
         }
     ],
@@ -52,7 +52,9 @@
                 " Pseint",
                 " Python"
             ],
-            "campers_asignados": []
+            "campers_asignados": [
+                1096065226
+            ]
         },
         {
             "id": "2",
@@ -63,9 +65,20 @@
                 " javaScript",
                 " C#"
             ],
-            "campers_asignados": []
+            "campers_asignados": [
+                1097011235
+            ]
         }
     ],
-    "enrollments": [],
+    "enrollments": [
+        {
+            "camper_id": 1096065226,
+            "camper_nombre": "Juan Pablo",
+            "route_nombre": "NodeJs",
+            "trainer_id": 123,
+            "trainer_nombre": "Pedro",
+            "salon": "Apolo"
+        }
+    ],
     "evaluations": []
 }
