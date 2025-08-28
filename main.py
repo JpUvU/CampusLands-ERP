@@ -1,4 +1,4 @@
-from modules import campers, trainers, coordinators, routes, enrollments, evaluations, reports
+from modules import campers, trainers, coordinators, routes, enrollments, evaluations, reports, recalibration
 import os
 
 def main():
@@ -29,7 +29,7 @@ def main():
                 case 5:
                     enrollments.menu()
                 case 6:
-                    evaluations.menu()
+                    recalibration.menu()
                 case 7:
                     reports.menu()         
                 case 0:

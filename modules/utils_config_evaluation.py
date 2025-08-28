@@ -1,22 +1,16 @@
 import json
 
-ARCHIVO_BASE_DATOS = "CampusLands-ERP/data/database.json"
+ARCHIVO_BASE_DATOS = "/CampusLands-ERP/data/config_evaluacion.json"
 
 # Carga la informacion
-def load_data():
+def load_data1():
     try:
         with open(ARCHIVO_BASE_DATOS, "r") as f:
             return json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
-        return { 
-            "campers": [],
-            "trainers": [],
-            "routes": [],
-            "enrollments": [],
-            "evaluations": [],
-        }
+        return {}
 
 # Guarda la informacion
-def save_data(data):
+def save_data1(data):
     with open(ARCHIVO_BASE_DATOS, "w") as f:
         json.dump(data, f, indent=4)
